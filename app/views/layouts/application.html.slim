@@ -32,9 +32,13 @@ html
                   = link_to 'サインアップ', new_user_registration_path, class: 'nav-link'
                 li.nav-item
                 = link_to 'ログイン', new_user_session_path, class: 'nav-link'
-
-    p.notice
-      = notice
-    p.alert
-      = alert
+    - if notice
+      p.alert.alert-success= notice
+    - if alert
+      p.alert.alert-danger= alert
     = yield
+
+    footer.footer.py-3.bg-light
+      .text-center
+        span.text-muted
+          | 2022 ボクやワタシなりのBiSH★Liveセトリ
