@@ -1,5 +1,5 @@
 h2
-  | アカウントロック解除方法のメール再送
+  | アカウントロック解除メール再送
 = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
   = render "devise/shared/error_messages", resource: resource
   .field
