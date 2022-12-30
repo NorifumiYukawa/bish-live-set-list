@@ -22,7 +22,7 @@ html
               - if user_signed_in?
                 li.nav-item
                   strong
-                    = link_to current_user.username, pages_show_path, class: 'nav-link'
+                    = current_user.username
                 li.nav-item
                   = link_to 'プロフィール変更', edit_user_registration_path, class: 'nav-link'
                 li.nav-item
