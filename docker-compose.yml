@@ -14,8 +14,9 @@ services:
     tty: true
     stdin_open: true
   db:
-    platform: linux/x86_64
-    image: mysql:8
+    platform: linux/arm64/v8
+    # platform: linux/x86_64
+    image: mysql:8.0
     volumes:
       - setori-db-volume:/var/lib/mysql
     ports:
